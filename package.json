@@ -1,0 +1,23 @@
+{
+  "name": "@totalpave/cordova-plugin-libsqlite",
+  "version": "0.0.0",
+  "description": "Cordva plugin to provide native SQLite binaries",
+  "main": "index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/totalpaveinc/cordova-plugin-libsqlite.git"
+  },
+  "author": "norman.breau@totalpave.com",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/totalpaveinc/cordova-plugin-libsqlite/issues"
+  },
+  "homepage": "https://github.com/totalpaveinc/cordova-plugin-libsqlite#readme"
+}
