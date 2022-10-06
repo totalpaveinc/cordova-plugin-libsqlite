@@ -15,21 +15,8 @@
   </platform>
 
   <platform name="ios">
-    <!-- 
-      We are using hooks instead of the framework tab for sqlite3.xcframework due to the framework tag's behaviour being insufficient.
-      XCFrameworks need to be embedded and linked to the application's binaries. This is also the default behaviour when dragging and dropped the XCFramework into XCode.
-
-      This configuration does not link the binary; so it runs into linker errors during build
-      <framework src="src/ios/frameworks/sqlite3.xcframework" custom="true" embed="true" />
-  
-      This configuration does not embed the binary; so it runs into runtime crash due to missing dylib file for physical devices. 
-      Simulator works fine.
-      <framework src="src/ios/frameworks/sqlite3.xcframework" custom="true"/>
-
-      The hooks uses https://github.com/kronenthaler/mod-pbxproj to install the xcframework to the xcode project.
-      The uninstall script uninstalls the xcframework from the xcode project.
-    -->
-    <hook type="after_plugin_install" src="hooks/ios/install-sqlite3.py"/>
-    <hook type="before_plugin_uninstall" src="hooks/ios/uninstall-sqlite3.py"/>
+    <hook type="after_plugin_install" src="hooks/ios/enableCXX17.py"/>
+    <hook type="before_plugin_uninstall" src="hooks/ios/disableCXX17.py"/>
+    <framework src="./bin/sqlite3.xcframework" custom="true" embed="true" link="true" />
   </platform>
 </plugin>
