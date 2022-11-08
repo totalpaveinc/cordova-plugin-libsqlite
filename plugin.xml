@@ -17,6 +17,8 @@
   <platform name="ios">
     <hook type="after_plugin_install" src="hooks/ios/enableCXX17.py"/>
     <hook type="before_plugin_uninstall" src="hooks/ios/disableCXX17.py"/>
+    <hook type="after_platform_add" src="hooks/ios/enableCXX17.py"/>
+    
     <framework src="./bin/sqlite3.xcframework" custom="true" embed="true" link="true" />
   </platform>
 </plugin>
