@@ -40,3 +40,22 @@ This plugin is provided under the [Apache 2.0](./LICENSE) license. [SQLite](http
 To update this package, pull the AAR/XCFramework files from [sqlite-bin](https://github.com/totalpaveinc/android-libcxx-bin) repository.
 
 To build a new SQLite archive, see the source [sqlite repository](https://github.com/totalpaveinc/sqlite).
+
+### constexpr Build Error
+
+If you see errors regarding "constexpr" it generally means the plugin's add script was not properly ran.
+
+This plugin requires the C++ Language Dialect c++17 in the XCode Build Settings. 
+We attempt to manage this with cordova hooks, the add script is ran on ios platform install and plugin add.
+
+There is one known path that has buggy behaviour which can result in constexpr errors when building.
+
+That path is:
+cordova plugin remove @totalpave/cordova-plugin-libsqlite -f
+cordova plugin add @totalpave/cordova-plugin-libsqlite
+
+The remove command will call the plugin's remove script but not actually remove the plugin.
+When you add the plugin back, it will say it was already installed and it won't run the plugin's add script.
+As a result, the C++ Language Dialect won't be set to C++17. You will see errors regarding "constexpr" when attempting to build.
+
+The solution is to remove and add the plugin again.
