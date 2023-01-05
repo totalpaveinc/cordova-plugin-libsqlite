@@ -1,6 +1,6 @@
 {
   "name": "@totalpave/cordova-plugin-libsqlite",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "Cordva plugin to provide native SQLite binaries",
   "main": "index.js",
   "publishConfig": {

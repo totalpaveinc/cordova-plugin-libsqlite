@@ -7,11 +7,17 @@ The rationale of this package is to provide the native binaries as a shared libr
 
 ## Version Schema
 
-TBD
+plugin.xml name states the SQLite version.
 
-<!--
-I think what is best is to mimic the Major & Minor version of SQLite. So our major & minor always represents the underlying version of SQLite's major/minor. Patches will always be reserved for own builds.
--->
+E.X: <name>SQLite Binaries v3.39.2</name>
+This indictates we are using SQLite 3.39.2.
+
+The plugin version is not tied to a particular SQLite binary version. It can be incremented for any appropriate change.
+
+E.X:
+- sqlite binaries were changed but; the SQLite binary version was not changed.
+- SQLite binaries were updated (new SQLite binary version)
+- cordova-plugin-libsqlite was changed in some other way, such as updating the cordova hooks.
 
 ## Usage
 
