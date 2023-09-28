@@ -1,6 +1,10 @@
 cordova-plugin-libsqlite
 ========================
 
+## Deprecation Notice
+
+libsqlite is now deployed through TotalPave's [SQLite repository](https://github.com/totalpaveinc/sqlite). This repository will no longer be updated. See [Releases](https://github.com/totalpaveinc/sqlite/releases) for prebuilt artefacts.
+
 Cordova plugin to provide native SQLite binaries. This package is intended to be installed as a peer dependency of other cordova plugins. It contains only native bindings to the SQLite library, not the webview API. For the WebView API, see [cordova-plugin-sqlite](https://github.com/totalpaveinc/cordova-plugin-sqlite).
 
 The rationale of this package is to provide the native binaries as a shared library to Cordova Applications, that multiple other plugins can use. It's important for an application to use only 1 version/copy of the SQLite library to avoid database corruption. See [Section 2.2](https://www.sqlite.org/howtocorrupt.html#posix_close_bug) & [Section 2.2.1](https://www.sqlite.org/howtocorrupt.html#posix_close_bug) for more information.
@@ -45,7 +49,7 @@ This plugin is provided under the [Apache 2.0](./LICENSE) license. [SQLite](http
 
 To update this package, pull the AAR/XCFramework files from [sqlite-bin](https://github.com/totalpaveinc/android-libcxx-bin) repository.
 
-To build a new SQLite archive, see the source [sqlite repository](https://github.com/totalpaveinc/sqlite).
+To build a new SQLite archive, see the source [SQLite repository](https://github.com/totalpaveinc/sqlite).
 
 ### constexpr Build Error
 
